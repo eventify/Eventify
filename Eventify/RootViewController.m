@@ -60,6 +60,7 @@
 - (void) showEventNewViewController
 {
     EventNewViewController *vc = [[EventNewViewController alloc] init ];
+    vc.navController = self.navigationController;
     [self presentModalViewController:vc animated:YES];
     
 }

@@ -13,6 +13,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *storyTitle;
+@property (nonatomic, retain) UINavigationController *navController;
 
 - (IBAction) createStoryButtonPressed:(id) sender;
 - (IBAction) getStoriesButtonPressed:(id) sender;

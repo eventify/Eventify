@@ -7,12 +7,14 @@
 //
 
 #import "EventNewViewController.h"
+#import "EventViewController.h"
+#import "SearchViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 
 @implementation EventNewViewController
 
-@synthesize storyTitle;
+@synthesize storyTitle, navController;
 
 - (void)dealloc
 {
@@ -37,6 +39,29 @@
     NSLog(@"status message = %@", statusMessage);
     
     [storyTitle resignFirstResponder];
+    
+    //if something was created, dismiss this VC and push the search controller.
+    if (statusCode == 200) {
+        EventViewController *evc = [[EventViewController alloc] init];
+        SearchViewController *svc = [[SearchViewController alloc] init];
+        
+        [self.navController pushViewController:evc animated:NO];
+        [self.navController pushViewController:svc animated:NO];
+        [self dismissModalViewControllerAnimated:YES];
+    } 
+    else  
+    {
+        //popup alert if we get anything other than a 200 code.
+        UIAlertView *errorAlert = [[UIAlertView alloc]
+                                   initWithTitle: @"Create Error:"
+                                   message: @"Unable to create event on storify.com"
+                                   delegate:nil
+                                   cancelButtonTitle:@"OK"
+                                   otherButtonTitles:nil];
+        [errorAlert show];
+        [errorAlert release];
+        
+    }
 }
 
 - (IBAction) getStoriesButtonPressed:(id)sender 
