@@ -109,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				07E92A3A13D2619F0088CA81 /* Eventify */,
+				07E92AEA13D26CED0088CA81 /* External */,
 				07E92A6013D2619F0088CA81 /* EventifyTests */,
 				07E92A3113D2619F0088CA81 /* Frameworks */,
 				07E92A2F13D2619F0088CA81 /* Products */,
@@ -220,6 +221,30 @@
 				07E92A4613D2619F0088CA81 /* Eventify.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		07E92AEA13D26CED0088CA81 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				07E92AED13D26D0F0088CA81 /* json-framework */,
+				07E92AEC13D26D010088CA81 /* asi-http-request */,
+			);
+			name = External;
+			path = Eventify;
+			sourceTree = "<group>";
+		};
+		07E92AEC13D26D010088CA81 /* asi-http-request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "asi-http-request";
+			sourceTree = "<group>";
+		};
+		07E92AED13D26D0F0088CA81 /* json-framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "json-framework";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
