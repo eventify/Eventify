@@ -38,7 +38,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSLog(@"number of rows: %d", [self.person.tweets count]);
-    return [self.person.tweets count];
 
 	/*
 	 If the requesting table view is the search display controller's table view, return the count of
@@ -46,12 +45,12 @@
 	 */
 	if (tableView == self.searchDisplayController.searchResultsTableView)
 	{
-        return [self.filteredListContent count];
+		return [self.person.tweets count];
     }
 	else
 	{
-        return [self.listContent count];
-    }
+		return 0;
+	}
 }
 
 
@@ -70,19 +69,15 @@
 	 If the requesting table view is the search display controller's table view, configure the cell using the filtered content, otherwise use the main list.
 	 */
 
-    cell.textLabel.text = [self.person.tweets objectAtIndex:indexPath.row];
 	
 	NSString *tweet = nil;
-	if (tableView == self.searchDisplayController.searchResultsTableView)
-	{
-        tweet = [self.filteredListContent objectAtIndex:indexPath.row];
+	if (tableView == self.searchDisplayController.searchResultsTableView) {
+		//tweet = [self.filteredListContent objectAtIndex:indexPath.row];
+		cell.textLabel.text = [self.person.tweets objectAtIndex:indexPath.row];
     }
-	else
-	{
-        tweet = [self.listContent objectAtIndex:indexPath.row];
+	else {
+		cell.textLabel.text = @"";
     }
-	
-	cell.textLabel.text = tweet;
 	return cell;
 }
 
@@ -96,19 +91,26 @@
 - (void)viewDidLoad
 {
 	
+    [super viewDidLoad];
+
 	self.title = @"Tweets";
 	self.filteredListContent = [NSMutableArray array];
 	[self.tableView reloadData];
 	self.tableView.scrollEnabled = YES;
-	
-    [super viewDidLoad];
     
     person = [[Person alloc] init];
     [person setUserName:@"iosdevcamp"];
     
     NSLog(@"get events for %@", [person userName]);
     
-	[person setStatusMessages:[[NSArray alloc] initWithArray:[TwitterHelper fetchTimelineForUsername:[person userName]]]];
+	NSArray *localMessages = [[NSArray alloc] initWithArray:TwitterHelper fetchInfoForUsername:[person userName]];
+	if (localMessages && [localMessages count]) {
+		[person setStatusMessages:localMessages];
+	}
+	else {
+		[person setStatusMessages:[NSArray arrayWithObjects:@"no tweets found", nil]];
+	}
+	[localMessage release];
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
