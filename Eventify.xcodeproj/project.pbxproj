@@ -174,11 +174,6 @@
 		07E92A2313D2619E0088CA81 = {
 			isa = PBXGroup;
 			children = (
-				08AEF53513D27C1200656864 /* MobileCoreServices.framework */,
-				08AEF53313D27C0A00656864 /* SystemConfiguration.framework */,
-				08AEF53113D27C0300656864 /* CFNetwork.framework */,
-				08AEF52F13D27BEB00656864 /* libz.1.2.3.dylib */,
-				08AEF52D13D27BE300656864 /* libxml2.2.7.3.dylib */,
 				07E92A3A13D2619F0088CA81 /* Eventify */,
 				07E92AEA13D26CED0088CA81 /* External */,
 				07E92A6013D2619F0088CA81 /* EventifyTests */,
@@ -199,6 +194,11 @@
 		07E92A3113D2619F0088CA81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08AEF53513D27C1200656864 /* MobileCoreServices.framework */,
+				08AEF53313D27C0A00656864 /* SystemConfiguration.framework */,
+				08AEF53113D27C0300656864 /* CFNetwork.framework */,
+				08AEF52F13D27BEB00656864 /* libz.1.2.3.dylib */,
+				08AEF52D13D27BE300656864 /* libxml2.2.7.3.dylib */,
 				07E92A3213D2619F0088CA81 /* UIKit.framework */,
 				07E92A3413D2619F0088CA81 /* Foundation.framework */,
 				07E92A3613D2619F0088CA81 /* CoreGraphics.framework */,
