@@ -103,14 +103,14 @@
     
     NSLog(@"get events for %@", [person userName]);
     
-	NSArray *localMessages = [[NSArray alloc] initWithArray:TwitterHelper fetchInfoForUsername:[person userName]];
+	NSArray *localMessages = [[NSArray alloc] initWithArray:[TwitterHelper fetchTimelineForUsername:[person userName]]];
 	if (localMessages && [localMessages count]) {
 		[person setStatusMessages:localMessages];
 	}
 	else {
 		[person setStatusMessages:[NSArray arrayWithObjects:@"no tweets found", nil]];
 	}
-	[localMessage release];
+	[localMessages release];
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
