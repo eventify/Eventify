@@ -9,6 +9,7 @@
 #import "EventifyAppDelegate.h"
 #import "RootViewController.h"
 #import "ASIHTTPRequest.h"
+#import "SBJson.h"
 
 @implementation EventifyAppDelegate
 
