@@ -58,6 +58,11 @@
 		08AEF52613D27B8700656864 /* ASIAuthenticationDialog.h in Sources */ = {isa = PBXBuildFile; fileRef = 08AEF51013D27B8700656864 /* ASIAuthenticationDialog.h */; };
 		08AEF52B13D27BAE00656864 /* Reachability.h in Sources */ = {isa = PBXBuildFile; fileRef = 08AEF52913D27BAE00656864 /* Reachability.h */; };
 		08AEF52C13D27BAE00656864 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AEF52A13D27BAE00656864 /* Reachability.m */; };
+		08AEF52E13D27BE300656864 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AEF52D13D27BE300656864 /* libxml2.2.7.3.dylib */; };
+		08AEF53013D27BEB00656864 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AEF52F13D27BEB00656864 /* libz.1.2.3.dylib */; };
+		08AEF53213D27C0300656864 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AEF53113D27C0300656864 /* CFNetwork.framework */; };
+		08AEF53413D27C0B00656864 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AEF53313D27C0A00656864 /* SystemConfiguration.framework */; };
+		08AEF53613D27C1300656864 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AEF53513D27C1200656864 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +132,11 @@
 		08AEF51013D27B8700656864 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; name = ASIAuthenticationDialog.h; path = "asi-http-request/Classes/ASIAuthenticationDialog.h"; sourceTree = SOURCE_ROOT; };
 		08AEF52913D27BAE00656864 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = Reachability.h; sourceTree = "<group>"; };
 		08AEF52A13D27BAE00656864 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		08AEF52D13D27BE300656864 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
+		08AEF52F13D27BEB00656864 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		08AEF53113D27C0300656864 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		08AEF53313D27C0A00656864 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		08AEF53513D27C1200656864 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AEF53613D27C1300656864 /* MobileCoreServices.framework in Frameworks */,
+				08AEF53413D27C0B00656864 /* SystemConfiguration.framework in Frameworks */,
+				08AEF53213D27C0300656864 /* CFNetwork.framework in Frameworks */,
+				08AEF53013D27BEB00656864 /* libz.1.2.3.dylib in Frameworks */,
+				08AEF52E13D27BE300656864 /* libxml2.2.7.3.dylib in Frameworks */,
 				07E92A3313D2619F0088CA81 /* UIKit.framework in Frameworks */,
 				07E92A3513D2619F0088CA81 /* Foundation.framework in Frameworks */,
 				07E92A3713D2619F0088CA81 /* CoreGraphics.framework in Frameworks */,
@@ -159,6 +174,11 @@
 		07E92A2313D2619E0088CA81 = {
 			isa = PBXGroup;
 			children = (
+				08AEF53513D27C1200656864 /* MobileCoreServices.framework */,
+				08AEF53313D27C0A00656864 /* SystemConfiguration.framework */,
+				08AEF53113D27C0300656864 /* CFNetwork.framework */,
+				08AEF52F13D27BEB00656864 /* libz.1.2.3.dylib */,
+				08AEF52D13D27BE300656864 /* libxml2.2.7.3.dylib */,
 				07E92A3A13D2619F0088CA81 /* Eventify */,
 				07E92AEA13D26CED0088CA81 /* External */,
 				07E92A6013D2619F0088CA81 /* EventifyTests */,
@@ -587,6 +607,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Eventify/Eventify-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "Eventify/Eventify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -598,6 +619,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Eventify/Eventify-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "Eventify/Eventify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
