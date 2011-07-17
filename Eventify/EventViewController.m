@@ -7,6 +7,7 @@
 //
 
 #import "EventViewController.h"
+#import "SearchViewController.h"
 
 @implementation EventViewController
 
@@ -33,6 +34,11 @@
 {
     [super viewDidLoad];
 
+    self.navigationItem.title = @"Tweets";
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showSearchViewController)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    [addButton release];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -154,6 +160,15 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+}
+
+- (void)showSearchViewController
+{
+    
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:searchViewController animated:YES];
+    [searchViewController release];
+    
 }
 
 @end

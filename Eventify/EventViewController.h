@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface EventViewController : UITableViewController
+{
+    
+}
+
+- (void)showSearchViewController;
 
 @end
