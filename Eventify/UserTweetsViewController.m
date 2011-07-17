@@ -14,6 +14,8 @@
 
 @synthesize person;
 @synthesize listContent, filteredListContent;
+@synthesize selectedImage;
+@synthesize unselectedImage,inPseudoEditMode,selectedArray,toolbar;
 
 
 #pragma mark - 
@@ -101,6 +103,17 @@
 	self.tableView.scrollEnabled = YES;
     
     self.person = [[Person alloc] init];
+    	
+	self.inPseudoEditMode = NO;
+	
+	self.selectedImage = [UIImage imageNamed:@"selected.png"];
+	self.unselectedImage = [UIImage imageNamed:@"unselected.png"];
+	
+    NSString *tweetName = [self.searchDisplayController.searchBar text];
+//	[self loadTweetsForUser:tweetName];
+	
+//	deleteButton.target = self;
+//	deleteButton.action = @selector(doDelete);
 }
 
 - (void)loadTweetsForUser:(NSString *)userName {
@@ -120,8 +133,9 @@
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *message in [self.person statusMessages]) {
-        NSLog(@"%@", [message objectForKey:@"text"]);
+    for (NSDictionary *message in [self.person statusMessages]) 
+    {
+//        NSLog(@"%@", [message objectForKey:@"text"]);
         [temp addObject:[message objectForKey:@"text"]];
     }
     self.person.tweets = temp;
@@ -241,16 +255,52 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    NSMutableArray *rowsToBeAdded = [[NSMutableArray alloc] init];
+	NSMutableArray *indexPaths = [[NSMutableArray alloc] init];
+	int index = 0;
+	for (NSNumber *rowSelected in selectedArray)
+	{
+		if ([rowSelected boolValue])
+		{
+			
+			[rowsToBeAdded addObject:[filteredListContent objectAtIndex:index]];
+			NSUInteger pathSource[2] = {0, index};
+			NSIndexPath *path = [NSIndexPath indexPathWithIndexes:pathSource length:2];
+			[indexPaths addObject:path];
+		}		
+		index++;
+	}
 	
-	/** @todo get the item ID so we can tell storify to add it to the story */
-	// (some object) = [self.listContent objectAtIndex:indexPath.row];
+	for (id value in rowsToBeAdded)
+	{
+		[filteredListContent removeObject:value];
+	}
+	
+	[self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+	
+	[indexPaths release];
+	[rowsToBeAdded release];
+	inPseudoEditMode = NO;
+    NSString *tweetName = [self.searchDisplayController.searchBar text];
+	[self loadTweetsForUser:tweetName];
+	[self.tableView reloadData];
+}
+
+-(IBAction)togglePseudoEditMode
+{
+	self.inPseudoEditMode = !inPseudoEditMode;
+	toolbar.hidden = !inPseudoEditMode;
+	
+	[self.tableView reloadData];
+	
+}
+- (void)populateSelectedArray
+{
+	NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:[filteredListContent count]];
+	for (int i=0; i < [filteredListContent count]; i++)
+		[array addObject:[NSNumber numberWithBool:NO]];
+	self.selectedArray = array;
+	[array release];
 }
 
 
