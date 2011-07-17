@@ -51,6 +51,7 @@
     NSArray *stories = [d objectForKey:@"stories"];
     for (NSDictionary *story in stories) {
         NSLog(@"title = %@",[story objectForKey:@"title"]);
+        [self insertNewObjectWithTitle:[story objectForKey:@"title"]];
     }
     
 }
@@ -194,28 +195,49 @@
     cell.textLabel.text = [[managedObject valueForKey:@"title"] description];
 }
 
-- (void)insertNewObject
+- (void)insertNewObjectWithTitle:(NSString *)title
 {
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    ///////////
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    [fetchRequest setEntity:entity];
+
+    NSString *predString = [NSString stringWithFormat:@"title like '%@'",title ];
+    NSPredicate *fetchPredicate = [NSPredicate predicateWithFormat:predString];
     
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error])
-    {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+    fetchRequest.predicate = fetchPredicate;
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    NSError *error;
+    NSArray *results = [context executeFetchRequest:fetchRequest error:&error];
+    
+
+    ///////////
+    if ([results count] == 0) {
+        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+        // If appropriate, configure the new managed object.
+        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        [newManagedObject setValue:title forKey:@"title"];
+        
+        // Save the context.
+        error = nil;
+        if (![context save:&error])
+        {
+            /*
+             Replace this implementation with code to handle the error appropriately.
+             
+             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+             */
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        
     }
 }
 

@@ -16,5 +16,6 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 - (void) loadEventsFromServer ;
+- (void)insertNewObjectWithTitle:(NSString *)title;
 
 @end
