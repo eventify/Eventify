@@ -157,6 +157,7 @@
 	toolbar.hidden = !inPseudoEditMode;
 }
 
+
 - (void)loadTweetsForUser:(NSString *)userName {
     
     [self.person setUserName:userName];

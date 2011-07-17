@@ -4,3 +4,6 @@
 [submodule "json-framework"]
 	path = json-framework
 	url = git://github.com/stig/json-framework.git
+[submodule "Twitter-OAuth-iPhone"]
+	path = Twitter-OAuth-iPhone
+	url = git://github.com/bengottlieb/Twitter-OAuth-iPhone.git
