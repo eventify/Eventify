@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "EventNewViewController.h"
 #import "SBJson.h"
+#import "ASIHTTPRequest.h"
 
 
 @interface RootViewController ()
@@ -23,6 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self loadEventsFromServer];
+    
     // Set up the edit and add buttons.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -31,6 +34,25 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showEventNewViewController)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
+}
+
+- (void) loadEventsFromServer 
+{
+    NSURL *url = [NSURL URLWithString:@"http://storify.com/eventify1.json"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request startSynchronous];
+    NSError *error = [request error];
+    NSString *response;
+    if (!error) {
+        response = [request responseString];
+    }
+    NSLog(@"User info with stories: %@", response);
+    NSDictionary *d = [response JSONValue];
+    NSArray *stories = [d objectForKey:@"stories"];
+    for (NSDictionary *story in stories) {
+        NSLog(@"title = %@",[story objectForKey:@"title"]);
+    }
+    
 }
 
 - (void) showEventNewViewController
@@ -169,7 +191,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[managedObject valueForKey:@"title"] description];
 }
 
 - (void)insertNewObject

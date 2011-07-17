@@ -26,25 +26,9 @@
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
-    [self loadEventsFromServer];
-    
     return YES;
 }
 
-- (void) loadEventsFromServer 
-{
-    NSURL *url = [NSURL URLWithString:@"http://storify.com/eventify1.json"];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request startSynchronous];
-    NSError *error = [request error];
-    NSString *response;
-    if (!error) {
-        response = [request responseString];
-    }
-    NSLog(@"User info with stories: %@", response);
-    NSDictionary *d = [response JSONValue];
-
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
