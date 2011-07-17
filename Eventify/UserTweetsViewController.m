@@ -116,6 +116,13 @@
 //	deleteButton.action = @selector(doDelete);
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSLog(@"search button clicked");
+    NSString *searchString = [self.searchDisplayController.searchBar text];
+    [self loadTweetsForUser:searchString];
+}
+
 - (void)loadTweetsForUser:(NSString *)userName {
     
     [self.person setUserName:userName];
@@ -311,8 +318,6 @@
     [self filterContentForSearchText:searchString scope:
 	 [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     
-	[self loadTweetsForUser:searchString];
-
     // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
