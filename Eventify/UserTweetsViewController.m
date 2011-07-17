@@ -159,30 +159,28 @@
     [self.person setUserName:userName];
     
     NSLog(@"get events for %@", [self.person userName]);
-	
-	[self.person setStatusMessages:[NSArray arrayWithObject:[NSDictionary dictionaryWithObject:@"no tweets found" forKey:@"text"]]];
     
-	NSDictionary *userInfo = [TwitterHelper fetchInfoForUsername:userName];
-	//NSLog(@"userInfo: %@", userInfo);
-	
-	if ( ! userInfo) {
-		return;
-	}
 	NSArray *localMessages = [[NSArray alloc] initWithArray:[TwitterHelper fetchTimelineForUsername:[self.person userName]]];
 	if (localMessages && [localMessages count]) {
 		[self.person setStatusMessages:localMessages];
+	}
+	else {
+		[self.person setStatusMessages:[NSArray arrayWithObject:[NSDictionary dictionaryWithObject:@"no tweets found" forKey:@"text"]]];
 	}
 	[localMessages release];
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
     for (NSDictionary *message in [self.person statusMessages]) {
-		//        NSLog(@"%@", [message objectForKey:@"text"]);
+//        NSLog(@"%@", [message objectForKey:@"text"]);
 		[temp addObject:[message objectForKey:@"text"]];
 		self.person.tweets = temp;
     }
     NSLog(@"tweets %@", self.person.tweets);    
-	
+    
+    NSDictionary *userInfo = [TwitterHelper fetchInfoForUsername:userName];
+    NSLog(@"userInfo: %@", userInfo);
+    
     self.person.description = [userInfo objectForKey:@"description"];
     self.person.image = [userInfo objectForKey:@"profile_image_url"];    
 }
