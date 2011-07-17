@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07C1359513D259CF0094C622"
+               BlueprintIdentifier = "07E92A2D13D2619F0088CA81"
                BuildableName = "Eventify.app"
                BlueprintName = "Eventify"
                ReferencedContainer = "container:Eventify.xcodeproj">
@@ -31,7 +31,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07C135BE13D259D00094C622"
+               BlueprintIdentifier = "07E92A5613D2619F0088CA81"
                BuildableName = "EventifyTests.octest"
                BlueprintName = "EventifyTests"
                ReferencedContainer = "container:Eventify.xcodeproj">
@@ -48,7 +48,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07C1359513D259CF0094C622"
+            BlueprintIdentifier = "07E92A2D13D2619F0088CA81"
             BuildableName = "Eventify.app"
             BlueprintName = "Eventify"
             ReferencedContainer = "container:Eventify.xcodeproj">
@@ -65,7 +65,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07C1359513D259CF0094C622"
+            BlueprintIdentifier = "07E92A2D13D2619F0088CA81"
             BuildableName = "Eventify.app"
             BlueprintName = "Eventify"
             ReferencedContainer = "container:Eventify.xcodeproj">

@@ -7,191 +7,215 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C1359B13D259D00094C622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1359A13D259D00094C622 /* UIKit.framework */; };
-		07C1359D13D259D00094C622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1359C13D259D00094C622 /* Foundation.framework */; };
-		07C1359F13D259D00094C622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1359E13D259D00094C622 /* CoreGraphics.framework */; };
-		07C135A113D259D00094C622 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C135A013D259D00094C622 /* CoreData.framework */; };
-		07C135A713D259D00094C622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07C135A513D259D00094C622 /* InfoPlist.strings */; };
-		07C135A913D259D00094C622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C135A813D259D00094C622 /* main.m */; };
-		07C135AD13D259D00094C622 /* EventifyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C135AC13D259D00094C622 /* EventifyAppDelegate.m */; };
-		07C135B013D259D00094C622 /* Eventify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C135AE13D259D00094C622 /* Eventify.xcdatamodeld */; };
-		07C135B313D259D00094C622 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C135B113D259D00094C622 /* MainWindow.xib */; };
-		07C135B613D259D00094C622 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C135B513D259D00094C622 /* RootViewController.m */; };
-		07C135B913D259D00094C622 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C135B713D259D00094C622 /* RootViewController.xib */; };
-		07C135C113D259D00094C622 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C135C013D259D00094C622 /* SenTestingKit.framework */; };
-		07C135C213D259D00094C622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1359A13D259D00094C622 /* UIKit.framework */; };
-		07C135C313D259D00094C622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1359C13D259D00094C622 /* Foundation.framework */; };
-		07C135C413D259D00094C622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1359E13D259D00094C622 /* CoreGraphics.framework */; };
-		07C135C513D259D00094C622 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C135A013D259D00094C622 /* CoreData.framework */; };
-		07C135CD13D259D00094C622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07C135CB13D259D00094C622 /* InfoPlist.strings */; };
-		07C135CF13D259D10094C622 /* EventifyTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 07C135CE13D259D10094C622 /* EventifyTests.h */; };
-		07C135D113D259D10094C622 /* EventifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C135D013D259D10094C622 /* EventifyTests.m */; };
+		07E92A3313D2619F0088CA81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3213D2619F0088CA81 /* UIKit.framework */; };
+		07E92A3513D2619F0088CA81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3413D2619F0088CA81 /* Foundation.framework */; };
+		07E92A3713D2619F0088CA81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3613D2619F0088CA81 /* CoreGraphics.framework */; };
+		07E92A3913D2619F0088CA81 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3813D2619F0088CA81 /* CoreData.framework */; };
+		07E92A3F13D2619F0088CA81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A3D13D2619F0088CA81 /* InfoPlist.strings */; };
+		07E92A4113D2619F0088CA81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A4013D2619F0088CA81 /* main.m */; };
+		07E92A4513D2619F0088CA81 /* EventifyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A4413D2619F0088CA81 /* EventifyAppDelegate.m */; };
+		07E92A4813D2619F0088CA81 /* Eventify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A4613D2619F0088CA81 /* Eventify.xcdatamodeld */; };
+		07E92A4B13D2619F0088CA81 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A4913D2619F0088CA81 /* MainWindow.xib */; };
+		07E92A4E13D2619F0088CA81 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A4D13D2619F0088CA81 /* RootViewController.m */; };
+		07E92A5113D2619F0088CA81 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A4F13D2619F0088CA81 /* RootViewController.xib */; };
+		07E92A5913D2619F0088CA81 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A5813D2619F0088CA81 /* SenTestingKit.framework */; };
+		07E92A5A13D2619F0088CA81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3213D2619F0088CA81 /* UIKit.framework */; };
+		07E92A5B13D2619F0088CA81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3413D2619F0088CA81 /* Foundation.framework */; };
+		07E92A5C13D2619F0088CA81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3613D2619F0088CA81 /* CoreGraphics.framework */; };
+		07E92A5D13D2619F0088CA81 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3813D2619F0088CA81 /* CoreData.framework */; };
+		07E92A6513D2619F0088CA81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A6313D2619F0088CA81 /* InfoPlist.strings */; };
+		07E92A6713D2619F0088CA81 /* EventifyTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A6613D2619F0088CA81 /* EventifyTests.h */; };
+		07E92A6913D2619F0088CA81 /* EventifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A6813D2619F0088CA81 /* EventifyTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07C135C613D259D00094C622 /* PBXContainerItemProxy */ = {
+		07E92A5E13D2619F0088CA81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 07C1358D13D259CF0094C622 /* Project object */;
+			containerPortal = 07E92A2513D2619E0088CA81 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 07C1359513D259CF0094C622;
+			remoteGlobalIDString = 07E92A2D13D2619F0088CA81;
 			remoteInfo = Eventify;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07C1359613D259D00094C622 /* Eventify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventify.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		07C1359A13D259D00094C622 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		07C1359C13D259D00094C622 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		07C1359E13D259D00094C622 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		07C135A013D259D00094C622 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		07C135A413D259D00094C622 /* Eventify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Eventify-Info.plist"; path = "../Eventify/Eventify-Info.plist"; sourceTree = "<group>"; };
-		07C135A613D259D00094C622 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		07C135A813D259D00094C622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07C135AA13D259D00094C622 /* Eventify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eventify-Prefix.pch"; sourceTree = "<group>"; };
-		07C135AB13D259D00094C622 /* EventifyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EventifyAppDelegate.h; path = ../Eventify/EventifyAppDelegate.h; sourceTree = "<group>"; };
-		07C135AC13D259D00094C622 /* EventifyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EventifyAppDelegate.m; path = ../Eventify/EventifyAppDelegate.m; sourceTree = "<group>"; };
-		07C135AF13D259D00094C622 /* Eventify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Eventify.xcdatamodel; sourceTree = "<group>"; };
-		07C135B213D259D00094C622 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		07C135B413D259D00094C622 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../Eventify/RootViewController.h; sourceTree = "<group>"; };
-		07C135B513D259D00094C622 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../Eventify/RootViewController.m; sourceTree = "<group>"; };
-		07C135B813D259D00094C622 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
-		07C135BF13D259D00094C622 /* EventifyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventifyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07C135C013D259D00094C622 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		07C135CA13D259D00094C622 /* EventifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventifyTests-Info.plist"; sourceTree = "<group>"; };
-		07C135CC13D259D00094C622 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		07C135CE13D259D10094C622 /* EventifyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventifyTests.h; sourceTree = "<group>"; };
-		07C135D013D259D10094C622 /* EventifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventifyTests.m; sourceTree = "<group>"; };
+		07E92A2E13D2619F0088CA81 /* Eventify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E92A3213D2619F0088CA81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07E92A3413D2619F0088CA81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07E92A3613D2619F0088CA81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07E92A3813D2619F0088CA81 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		07E92A3C13D2619F0088CA81 /* Eventify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Eventify-Info.plist"; sourceTree = "<group>"; };
+		07E92A3E13D2619F0088CA81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07E92A4013D2619F0088CA81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07E92A4213D2619F0088CA81 /* Eventify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eventify-Prefix.pch"; sourceTree = "<group>"; };
+		07E92A4313D2619F0088CA81 /* EventifyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventifyAppDelegate.h; sourceTree = "<group>"; };
+		07E92A4413D2619F0088CA81 /* EventifyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventifyAppDelegate.m; sourceTree = "<group>"; };
+		07E92A4713D2619F0088CA81 /* Eventify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Eventify.xcdatamodel; sourceTree = "<group>"; };
+		07E92A4A13D2619F0088CA81 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		07E92A4C13D2619F0088CA81 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		07E92A4D13D2619F0088CA81 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		07E92A5013D2619F0088CA81 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		07E92A5713D2619F0088CA81 /* EventifyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventifyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E92A5813D2619F0088CA81 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		07E92A6213D2619F0088CA81 /* EventifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventifyTests-Info.plist"; sourceTree = "<group>"; };
+		07E92A6413D2619F0088CA81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07E92A6613D2619F0088CA81 /* EventifyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventifyTests.h; sourceTree = "<group>"; };
+		07E92A6813D2619F0088CA81 /* EventifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventifyTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		07C1359313D259CF0094C622 /* Frameworks */ = {
+		07E92A2B13D2619F0088CA81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C1359B13D259D00094C622 /* UIKit.framework in Frameworks */,
-				07C1359D13D259D00094C622 /* Foundation.framework in Frameworks */,
-				07C1359F13D259D00094C622 /* CoreGraphics.framework in Frameworks */,
-				07C135A113D259D00094C622 /* CoreData.framework in Frameworks */,
+				07E92A3313D2619F0088CA81 /* UIKit.framework in Frameworks */,
+				07E92A3513D2619F0088CA81 /* Foundation.framework in Frameworks */,
+				07E92A3713D2619F0088CA81 /* CoreGraphics.framework in Frameworks */,
+				07E92A3913D2619F0088CA81 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07C135BB13D259D00094C622 /* Frameworks */ = {
+		07E92A5313D2619F0088CA81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C135C113D259D00094C622 /* SenTestingKit.framework in Frameworks */,
-				07C135C213D259D00094C622 /* UIKit.framework in Frameworks */,
-				07C135C313D259D00094C622 /* Foundation.framework in Frameworks */,
-				07C135C413D259D00094C622 /* CoreGraphics.framework in Frameworks */,
-				07C135C513D259D00094C622 /* CoreData.framework in Frameworks */,
+				07E92A5913D2619F0088CA81 /* SenTestingKit.framework in Frameworks */,
+				07E92A5A13D2619F0088CA81 /* UIKit.framework in Frameworks */,
+				07E92A5B13D2619F0088CA81 /* Foundation.framework in Frameworks */,
+				07E92A5C13D2619F0088CA81 /* CoreGraphics.framework in Frameworks */,
+				07E92A5D13D2619F0088CA81 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07C1358B13D259CF0094C622 = {
+		07E92A2313D2619E0088CA81 = {
 			isa = PBXGroup;
 			children = (
-				07C135A213D259D00094C622 /* Eventify */,
-				07C135C813D259D00094C622 /* EventifyTests */,
-				07C1359913D259D00094C622 /* Frameworks */,
-				07C1359713D259D00094C622 /* Products */,
+				07E92A3A13D2619F0088CA81 /* Eventify */,
+				07E92A6013D2619F0088CA81 /* EventifyTests */,
+				07E92A3113D2619F0088CA81 /* Frameworks */,
+				07E92A2F13D2619F0088CA81 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		07C1359713D259D00094C622 /* Products */ = {
+		07E92A2F13D2619F0088CA81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07C1359613D259D00094C622 /* Eventify.app */,
-				07C135BF13D259D00094C622 /* EventifyTests.octest */,
+				07E92A2E13D2619F0088CA81 /* Eventify.app */,
+				07E92A5713D2619F0088CA81 /* EventifyTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07C1359913D259D00094C622 /* Frameworks */ = {
+		07E92A3113D2619F0088CA81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07C1359A13D259D00094C622 /* UIKit.framework */,
-				07C1359C13D259D00094C622 /* Foundation.framework */,
-				07C1359E13D259D00094C622 /* CoreGraphics.framework */,
-				07C135A013D259D00094C622 /* CoreData.framework */,
-				07C135C013D259D00094C622 /* SenTestingKit.framework */,
+				07E92A3213D2619F0088CA81 /* UIKit.framework */,
+				07E92A3413D2619F0088CA81 /* Foundation.framework */,
+				07E92A3613D2619F0088CA81 /* CoreGraphics.framework */,
+				07E92A3813D2619F0088CA81 /* CoreData.framework */,
+				07E92A5813D2619F0088CA81 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		07C135A213D259D00094C622 /* Eventify */ = {
+		07E92A3A13D2619F0088CA81 /* Eventify */ = {
 			isa = PBXGroup;
 			children = (
-				07C135A813D259D00094C622 /* main.m */,
-				07C135AA13D259D00094C622 /* Eventify-Prefix.pch */,
-				07C135E513D25BC30094C622 /* Source */,
-				07C135E413D25BB90094C622 /* Resources */,
-				07C135E313D25BAC0094C622 /* External */,
+				07E92A4013D2619F0088CA81 /* main.m */,
+				07E92A4213D2619F0088CA81 /* Eventify-Prefix.pch */,
+				07E92A7413D261D20088CA81 /* Resources */,
+				07E92A7213D261A80088CA81 /* Source */,
+				07E92A7613D262380088CA81 /* External */,
 			);
 			path = Eventify;
 			sourceTree = "<group>";
 		};
-		07C135C813D259D00094C622 /* EventifyTests */ = {
+		07E92A6013D2619F0088CA81 /* EventifyTests */ = {
 			isa = PBXGroup;
 			children = (
-				07C135CE13D259D10094C622 /* EventifyTests.h */,
-				07C135D013D259D10094C622 /* EventifyTests.m */,
-				07C135C913D259D00094C622 /* Supporting Files */,
+				07E92A6613D2619F0088CA81 /* EventifyTests.h */,
+				07E92A6813D2619F0088CA81 /* EventifyTests.m */,
+				07E92A6113D2619F0088CA81 /* Supporting Files */,
 			);
 			path = EventifyTests;
 			sourceTree = "<group>";
 		};
-		07C135C913D259D00094C622 /* Supporting Files */ = {
+		07E92A6113D2619F0088CA81 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07C135CA13D259D00094C622 /* EventifyTests-Info.plist */,
-				07C135CB13D259D00094C622 /* InfoPlist.strings */,
+				07E92A6213D2619F0088CA81 /* EventifyTests-Info.plist */,
+				07E92A6313D2619F0088CA81 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07C135E313D25BAC0094C622 /* External */ = {
+		07E92A7213D261A80088CA81 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				07E92A7713D262540088CA81 /* Model */,
+				07E92A7313D261C20088CA81 /* App */,
+				07E92A7513D261F40088CA81 /* View Controllers */,
 			);
-			path = External;
-			sourceTree = SOURCE_ROOT;
+			name = Source;
+			sourceTree = "<group>";
 		};
-		07C135E413D25BB90094C622 /* Resources */ = {
+		07E92A7313D261C20088CA81 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				07C135B113D259D00094C622 /* MainWindow.xib */,
-				07C135B713D259D00094C622 /* RootViewController.xib */,
-				07C135A413D259D00094C622 /* Eventify-Info.plist */,
-				07C135A513D259D00094C622 /* InfoPlist.strings */,
+				07E92A4313D2619F0088CA81 /* EventifyAppDelegate.h */,
+				07E92A4413D2619F0088CA81 /* EventifyAppDelegate.m */,
 			);
-			path = Resources;
-			sourceTree = SOURCE_ROOT;
+			name = App;
+			sourceTree = "<group>";
 		};
-		07C135E513D25BC30094C622 /* Source */ = {
+		07E92A7413D261D20088CA81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				07C135AB13D259D00094C622 /* EventifyAppDelegate.h */,
-				07C135AC13D259D00094C622 /* EventifyAppDelegate.m */,
-				07C135B413D259D00094C622 /* RootViewController.h */,
-				07C135B513D259D00094C622 /* RootViewController.m */,
-				07C135AE13D259D00094C622 /* Eventify.xcdatamodeld */,
+				07E92A4913D2619F0088CA81 /* MainWindow.xib */,
+				07E92A4F13D2619F0088CA81 /* RootViewController.xib */,
+				07E92A3C13D2619F0088CA81 /* Eventify-Info.plist */,
+				07E92A3D13D2619F0088CA81 /* InfoPlist.strings */,
 			);
-			path = Source;
-			sourceTree = SOURCE_ROOT;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		07E92A7513D261F40088CA81 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07E92A4C13D2619F0088CA81 /* RootViewController.h */,
+				07E92A4D13D2619F0088CA81 /* RootViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		07E92A7613D262380088CA81 /* External */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		07E92A7713D262540088CA81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07E92A4613D2619F0088CA81 /* Eventify.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07C1359513D259CF0094C622 /* Eventify */ = {
+		07E92A2D13D2619F0088CA81 /* Eventify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07C135D413D259D10094C622 /* Build configuration list for PBXNativeTarget "Eventify" */;
+			buildConfigurationList = 07E92A6C13D2619F0088CA81 /* Build configuration list for PBXNativeTarget "Eventify" */;
 			buildPhases = (
-				07C1359213D259CF0094C622 /* Sources */,
-				07C1359313D259CF0094C622 /* Frameworks */,
-				07C1359413D259CF0094C622 /* Resources */,
+				07E92A2A13D2619F0088CA81 /* Sources */,
+				07E92A2B13D2619F0088CA81 /* Frameworks */,
+				07E92A2C13D2619F0088CA81 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -199,75 +223,75 @@
 			);
 			name = Eventify;
 			productName = Eventify;
-			productReference = 07C1359613D259D00094C622 /* Eventify.app */;
+			productReference = 07E92A2E13D2619F0088CA81 /* Eventify.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07C135BE13D259D00094C622 /* EventifyTests */ = {
+		07E92A5613D2619F0088CA81 /* EventifyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07C135D713D259D10094C622 /* Build configuration list for PBXNativeTarget "EventifyTests" */;
+			buildConfigurationList = 07E92A6F13D2619F0088CA81 /* Build configuration list for PBXNativeTarget "EventifyTests" */;
 			buildPhases = (
-				07C135BA13D259D00094C622 /* Sources */,
-				07C135BB13D259D00094C622 /* Frameworks */,
-				07C135BC13D259D00094C622 /* Resources */,
-				07C135BD13D259D00094C622 /* ShellScript */,
+				07E92A5213D2619F0088CA81 /* Sources */,
+				07E92A5313D2619F0088CA81 /* Frameworks */,
+				07E92A5413D2619F0088CA81 /* Resources */,
+				07E92A5513D2619F0088CA81 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				07C135C713D259D00094C622 /* PBXTargetDependency */,
+				07E92A5F13D2619F0088CA81 /* PBXTargetDependency */,
 			);
 			name = EventifyTests;
 			productName = EventifyTests;
-			productReference = 07C135BF13D259D00094C622 /* EventifyTests.octest */;
+			productReference = 07E92A5713D2619F0088CA81 /* EventifyTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		07C1358D13D259CF0094C622 /* Project object */ = {
+		07E92A2513D2619E0088CA81 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 07C1359013D259CF0094C622 /* Build configuration list for PBXProject "Eventify" */;
+			buildConfigurationList = 07E92A2813D2619E0088CA81 /* Build configuration list for PBXProject "Eventify" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 07C1358B13D259CF0094C622;
-			productRefGroup = 07C1359713D259D00094C622 /* Products */;
+			mainGroup = 07E92A2313D2619E0088CA81;
+			productRefGroup = 07E92A2F13D2619F0088CA81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07C1359513D259CF0094C622 /* Eventify */,
-				07C135BE13D259D00094C622 /* EventifyTests */,
+				07E92A2D13D2619F0088CA81 /* Eventify */,
+				07E92A5613D2619F0088CA81 /* EventifyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		07C1359413D259CF0094C622 /* Resources */ = {
+		07E92A2C13D2619F0088CA81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C135A713D259D00094C622 /* InfoPlist.strings in Resources */,
-				07C135B313D259D00094C622 /* MainWindow.xib in Resources */,
-				07C135B913D259D00094C622 /* RootViewController.xib in Resources */,
+				07E92A3F13D2619F0088CA81 /* InfoPlist.strings in Resources */,
+				07E92A4B13D2619F0088CA81 /* MainWindow.xib in Resources */,
+				07E92A5113D2619F0088CA81 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07C135BC13D259D00094C622 /* Resources */ = {
+		07E92A5413D2619F0088CA81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C135CD13D259D00094C622 /* InfoPlist.strings in Resources */,
-				07C135CF13D259D10094C622 /* EventifyTests.h in Resources */,
+				07E92A6513D2619F0088CA81 /* InfoPlist.strings in Resources */,
+				07E92A6713D2619F0088CA81 /* EventifyTests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07C135BD13D259D00094C622 /* ShellScript */ = {
+		07E92A5513D2619F0088CA81 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,67 +307,64 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		07C1359213D259CF0094C622 /* Sources */ = {
+		07E92A2A13D2619F0088CA81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C135A913D259D00094C622 /* main.m in Sources */,
-				07C135AD13D259D00094C622 /* EventifyAppDelegate.m in Sources */,
-				07C135B013D259D00094C622 /* Eventify.xcdatamodeld in Sources */,
-				07C135B613D259D00094C622 /* RootViewController.m in Sources */,
+				07E92A4113D2619F0088CA81 /* main.m in Sources */,
+				07E92A4513D2619F0088CA81 /* EventifyAppDelegate.m in Sources */,
+				07E92A4813D2619F0088CA81 /* Eventify.xcdatamodeld in Sources */,
+				07E92A4E13D2619F0088CA81 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07C135BA13D259D00094C622 /* Sources */ = {
+		07E92A5213D2619F0088CA81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C135D113D259D10094C622 /* EventifyTests.m in Sources */,
+				07E92A6913D2619F0088CA81 /* EventifyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07C135C713D259D00094C622 /* PBXTargetDependency */ = {
+		07E92A5F13D2619F0088CA81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07C1359513D259CF0094C622 /* Eventify */;
-			targetProxy = 07C135C613D259D00094C622 /* PBXContainerItemProxy */;
+			target = 07E92A2D13D2619F0088CA81 /* Eventify */;
+			targetProxy = 07E92A5E13D2619F0088CA81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		07C135A513D259D00094C622 /* InfoPlist.strings */ = {
+		07E92A3D13D2619F0088CA81 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07C135A613D259D00094C622 /* en */,
+				07E92A3E13D2619F0088CA81 /* en */,
 			);
 			name = InfoPlist.strings;
-			path = ../Eventify;
 			sourceTree = "<group>";
 		};
-		07C135B113D259D00094C622 /* MainWindow.xib */ = {
+		07E92A4913D2619F0088CA81 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07C135B213D259D00094C622 /* en */,
+				07E92A4A13D2619F0088CA81 /* en */,
 			);
 			name = MainWindow.xib;
-			path = ../Eventify;
 			sourceTree = "<group>";
 		};
-		07C135B713D259D00094C622 /* RootViewController.xib */ = {
+		07E92A4F13D2619F0088CA81 /* RootViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07C135B813D259D00094C622 /* en */,
+				07E92A5013D2619F0088CA81 /* en */,
 			);
 			name = RootViewController.xib;
-			path = ../Eventify;
 			sourceTree = "<group>";
 		};
-		07C135CB13D259D00094C622 /* InfoPlist.strings */ = {
+		07E92A6313D2619F0088CA81 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07C135CC13D259D00094C622 /* en */,
+				07E92A6413D2619F0088CA81 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -351,7 +372,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		07C135D213D259D10094C622 /* Debug */ = {
+		07E92A6A13D2619F0088CA81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -375,7 +396,7 @@
 			};
 			name = Debug;
 		};
-		07C135D313D259D10094C622 /* Release */ = {
+		07E92A6B13D2619F0088CA81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -394,31 +415,29 @@
 			};
 			name = Release;
 		};
-		07C135D513D259D10094C622 /* Debug */ = {
+		07E92A6D13D2619F0088CA81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Eventify/Eventify-Prefix.pch";
 				INFOPLIST_FILE = "Eventify/Eventify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		07C135D613D259D10094C622 /* Release */ = {
+		07E92A6E13D2619F0088CA81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Eventify/Eventify-Prefix.pch";
 				INFOPLIST_FILE = "Eventify/Eventify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		07C135D813D259D10094C622 /* Debug */ = {
+		07E92A7013D2619F0088CA81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Eventify.app/Eventify";
@@ -435,7 +454,7 @@
 			};
 			name = Debug;
 		};
-		07C135D913D259D10094C622 /* Release */ = {
+		07E92A7113D2619F0088CA81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Eventify.app/Eventify";
@@ -455,46 +474,45 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07C1359013D259CF0094C622 /* Build configuration list for PBXProject "Eventify" */ = {
+		07E92A2813D2619E0088CA81 /* Build configuration list for PBXProject "Eventify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07C135D213D259D10094C622 /* Debug */,
-				07C135D313D259D10094C622 /* Release */,
+				07E92A6A13D2619F0088CA81 /* Debug */,
+				07E92A6B13D2619F0088CA81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07C135D413D259D10094C622 /* Build configuration list for PBXNativeTarget "Eventify" */ = {
+		07E92A6C13D2619F0088CA81 /* Build configuration list for PBXNativeTarget "Eventify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07C135D513D259D10094C622 /* Debug */,
-				07C135D613D259D10094C622 /* Release */,
+				07E92A6D13D2619F0088CA81 /* Debug */,
+				07E92A6E13D2619F0088CA81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		07C135D713D259D10094C622 /* Build configuration list for PBXNativeTarget "EventifyTests" */ = {
+		07E92A6F13D2619F0088CA81 /* Build configuration list for PBXNativeTarget "EventifyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07C135D813D259D10094C622 /* Debug */,
-				07C135D913D259D10094C622 /* Release */,
+				07E92A7013D2619F0088CA81 /* Debug */,
+				07E92A7113D2619F0088CA81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		07C135AE13D259D00094C622 /* Eventify.xcdatamodeld */ = {
+		07E92A4613D2619F0088CA81 /* Eventify.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				07C135AF13D259D00094C622 /* Eventify.xcdatamodel */,
+				07E92A4713D2619F0088CA81 /* Eventify.xcdatamodel */,
 			);
-			currentVersion = 07C135AF13D259D00094C622 /* Eventify.xcdatamodel */;
-			name = Eventify.xcdatamodeld;
-			path = ../Eventify/Eventify.xcdatamodeld;
+			currentVersion = 07E92A4713D2619F0088CA81 /* Eventify.xcdatamodel */;
+			path = Eventify.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 07C1358D13D259CF0094C622 /* Project object */;
+	rootObject = 07E92A2513D2619E0088CA81 /* Project object */;
 }
