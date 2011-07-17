@@ -59,7 +59,7 @@
         
         if (statusCode == 200) {
             EventViewController *evc = [[EventViewController alloc] init];
-            UserTweetsViewController *uvc = [[UserTweetsViewController alloc] init];
+            UserTweetsViewController *uvc = [[UserTweetsViewController alloc] initWithNibName:@"UserTweetsViewController" bundle:nil];
             
             [self.navController pushViewController:evc animated:NO];
             [self.navController pushViewController:uvc animated:NO];
