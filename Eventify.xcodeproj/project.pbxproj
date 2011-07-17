@@ -26,12 +26,14 @@
 		07E92A6513D2619F0088CA81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A6313D2619F0088CA81 /* InfoPlist.strings */; };
 		07E92A6713D2619F0088CA81 /* EventifyTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A6613D2619F0088CA81 /* EventifyTests.h */; };
 		07E92A6913D2619F0088CA81 /* EventifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A6813D2619F0088CA81 /* EventifyTests.m */; };
-		07E92A7F13D2654A0088CA81 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A7D13D2654A0088CA81 /* EventListViewController.m */; };
 		07E92A8013D2654A0088CA81 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A7E13D2654A0088CA81 /* EventListViewController.xib */; };
 		07E92A8513D2656E0088CA81 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A8313D2656E0088CA81 /* EventViewController.m */; };
 		07E92A8613D2656E0088CA81 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A8413D2656E0088CA81 /* EventViewController.xib */; };
 		07E92A8A13D265AF0088CA81 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A8813D265AF0088CA81 /* SearchViewController.m */; };
 		07E92A8B13D265AF0088CA81 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A8913D265AF0088CA81 /* SearchViewController.xib */; };
+		08AEF4EC13D277EF00656864 /* EventNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AEF4EB13D277EF00656864 /* EventNewViewController.xib */; };
+		08AEF4F013D2780000656864 /* EventNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AEF4EE13D2780000656864 /* EventNewViewController.m */; };
+		08AEF4F113D2780000656864 /* EventNewViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 08AEF4EF13D2780000656864 /* EventNewViewController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +69,6 @@
 		07E92A6413D2619F0088CA81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07E92A6613D2619F0088CA81 /* EventifyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventifyTests.h; sourceTree = "<group>"; };
 		07E92A6813D2619F0088CA81 /* EventifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventifyTests.m; sourceTree = "<group>"; };
-		07E92A7C13D2654A0088CA81 /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
-		07E92A7D13D2654A0088CA81 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
 		07E92A7E13D2654A0088CA81 /* EventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListViewController.xib; sourceTree = "<group>"; };
 		07E92A8213D2656E0088CA81 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		07E92A8313D2656E0088CA81 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
@@ -76,6 +76,9 @@
 		07E92A8713D265AF0088CA81 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		07E92A8813D265AF0088CA81 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		07E92A8913D265AF0088CA81 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		08AEF4EB13D277EF00656864 /* EventNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventNewViewController.xib; sourceTree = "<group>"; };
+		08AEF4EE13D2780000656864 /* EventNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNewViewController.m; sourceTree = "<group>"; };
+		08AEF4EF13D2780000656864 /* EventNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = EventNewViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,7 @@
 		07E92A7413D261D20088CA81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				08AEF4EB13D277EF00656864 /* EventNewViewController.xib */,
 				07E92A4913D2619F0088CA81 /* MainWindow.xib */,
 				07E92A4F13D2619F0088CA81 /* RootViewController.xib */,
 				07E92A7E13D2654A0088CA81 /* EventListViewController.xib */,
@@ -203,10 +207,10 @@
 		07E92A7513D261F40088CA81 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				08AEF4EE13D2780000656864 /* EventNewViewController.m */,
+				08AEF4EF13D2780000656864 /* EventNewViewController.h */,
 				07E92A4C13D2619F0088CA81 /* RootViewController.h */,
 				07E92A4D13D2619F0088CA81 /* RootViewController.m */,
-				07E92A7C13D2654A0088CA81 /* EventListViewController.h */,
-				07E92A7D13D2654A0088CA81 /* EventListViewController.m */,
 				07E92A8213D2656E0088CA81 /* EventViewController.h */,
 				07E92A8313D2656E0088CA81 /* EventViewController.m */,
 				07E92A8713D265AF0088CA81 /* SearchViewController.h */,
@@ -320,6 +324,7 @@
 				07E92A8013D2654A0088CA81 /* EventListViewController.xib in Resources */,
 				07E92A8613D2656E0088CA81 /* EventViewController.xib in Resources */,
 				07E92A8B13D265AF0088CA81 /* SearchViewController.xib in Resources */,
+				08AEF4EC13D277EF00656864 /* EventNewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,9 +364,10 @@
 				07E92A4513D2619F0088CA81 /* EventifyAppDelegate.m in Sources */,
 				07E92A4813D2619F0088CA81 /* Eventify.xcdatamodeld in Sources */,
 				07E92A4E13D2619F0088CA81 /* RootViewController.m in Sources */,
-				07E92A7F13D2654A0088CA81 /* EventListViewController.m in Sources */,
 				07E92A8513D2656E0088CA81 /* EventViewController.m in Sources */,
 				07E92A8A13D265AF0088CA81 /* SearchViewController.m in Sources */,
+				08AEF4F013D2780000656864 /* EventNewViewController.m in Sources */,
+				08AEF4F113D2780000656864 /* EventNewViewController.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

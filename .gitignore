@@ -1,4 +1,5 @@
 .DS_Store
+*.xcuserdatad
 # xcode noise
 *.mode1v3
 *.pbxuser
