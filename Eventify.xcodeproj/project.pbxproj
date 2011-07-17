@@ -73,6 +73,8 @@
 		4A1F205E13D27E4E007851D0 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F205013D27E4E007851D0 /* SBJsonTokeniser.m */; };
 		4A1F205F13D27E4E007851D0 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F205213D27E4E007851D0 /* SBJsonUTF8Stream.m */; };
 		4A1F206013D27E4E007851D0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F205413D27E4E007851D0 /* SBJsonWriter.m */; };
+		4A84E21813D3664F00B72F28 /* UserTweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A84E21613D3664E00B72F28 /* UserTweetsViewController.m */; };
+		4A84E21913D3664F00B72F28 /* UserTweetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A84E21713D3664E00B72F28 /* UserTweetsViewController.xib */; };
 		C212784713D2A5C60029CC6F /* TwitterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C212784613D2A5C60029CC6F /* TwitterHelper.m */; };
 		C212784B13D2A5DA0029CC6F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C212784A13D2A5DA0029CC6F /* Person.m */; };
 		C212785913D357700029CC6F /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C212785813D357700029CC6F /* UserView.xib */; };
@@ -174,6 +176,9 @@
 		4A1F205213D27E4E007851D0 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonUTF8Stream.m; path = "json-framework/Classes/SBJsonUTF8Stream.m"; sourceTree = SOURCE_ROOT; };
 		4A1F205313D27E4E007851D0 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = "json-framework/Classes/SBJsonWriter.h"; sourceTree = SOURCE_ROOT; };
 		4A1F205413D27E4E007851D0 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "json-framework/Classes/SBJsonWriter.m"; sourceTree = SOURCE_ROOT; };
+		4A84E21513D3664D00B72F28 /* UserTweetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTweetsViewController.h; sourceTree = "<group>"; };
+		4A84E21613D3664E00B72F28 /* UserTweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTweetsViewController.m; sourceTree = "<group>"; };
+		4A84E21713D3664E00B72F28 /* UserTweetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTweetsViewController.xib; sourceTree = "<group>"; };
 		C212784513D2A5C60029CC6F /* TwitterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterHelper.h; sourceTree = "<group>"; };
 		C212784613D2A5C60029CC6F /* TwitterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterHelper.m; sourceTree = "<group>"; };
 		C212784913D2A5DA0029CC6F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -310,6 +315,7 @@
 				08AEF4EB13D277EF00656864 /* EventNewViewController.xib */,
 				07E92A4913D2619F0088CA81 /* MainWindow.xib */,
 				07E92A4F13D2619F0088CA81 /* RootViewController.xib */,
+				4A84E21713D3664E00B72F28 /* UserTweetsViewController.xib */,
 				07E92A8413D2656E0088CA81 /* EventViewController.xib */,
 				07E92A3C13D2619F0088CA81 /* Eventify-Info.plist */,
 				07E92A3D13D2619F0088CA81 /* InfoPlist.strings */,
@@ -330,6 +336,8 @@
 				07E92A8313D2656E0088CA81 /* EventViewController.m */,
 				07E92A8713D265AF0088CA81 /* SearchViewController.h */,
 				07E92A8813D265AF0088CA81 /* SearchViewController.m */,
+				4A84E21513D3664D00B72F28 /* UserTweetsViewController.h */,
+				4A84E21613D3664E00B72F28 /* UserTweetsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -507,6 +515,7 @@
 				08AEF4EC13D277EF00656864 /* EventNewViewController.xib in Resources */,
 				C212785913D357700029CC6F /* UserView.xib in Resources */,
 				C212786C13D35B040029CC6F /* TweetView.xib in Resources */,
+				4A84E21913D3664F00B72F28 /* UserTweetsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +597,7 @@
 				4A1F206013D27E4E007851D0 /* SBJsonWriter.m in Sources */,
 				C212784713D2A5C60029CC6F /* TwitterHelper.m in Sources */,
 				C212784B13D2A5DA0029CC6F /* Person.m in Sources */,
+				4A84E21813D3664F00B72F28 /* UserTweetsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +701,7 @@
 		07E92A6D13D2619F0088CA81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Carlos McEvilly (6BTR9SHYLY)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Eventify/Eventify-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -699,6 +710,7 @@
 				);
 				INFOPLIST_FILE = "Eventify/Eventify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3CCF74A-3673-4214-83A2-00E81CBDA770";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -706,6 +718,7 @@
 		07E92A6E13D2619F0088CA81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Carlos McEvilly (6BTR9SHYLY)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Eventify/Eventify-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -714,6 +727,7 @@
 				);
 				INFOPLIST_FILE = "Eventify/Eventify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3CCF74A-3673-4214-83A2-00E81CBDA770";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
