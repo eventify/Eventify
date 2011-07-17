@@ -43,19 +43,19 @@
     //if something was created, dismiss this VC and push the search controller.
     if (statusCode == 200) {
         //if created then publish it and push 2 controllers
-        NSString *string = [NSString stringWithFormat:@"http://storify.com/eventify1/%@/publish", storyTitle.text];
-        NSURL *url = [NSURL URLWithString:string];
-        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-        [request setPostValue:@"eventify1" forKey:@"authorUsername"];
-        [request setPostValue:storyTitle.text forKey:@"title"];
-        [request setPostValue:@"eventify1" forKey:@"username"];
-        [request setPostValue:@"d6e2ba3299dc8e372f2f9788e1c8cb95" forKey:@"api_key"];
-        [request setRequestMethod:@"POST"];
-        [request startSynchronous];
-        int statusCode = [request responseStatusCode];
-        NSString *statusMessage = [request responseStatusMessage];
-        NSLog(@"publish status code = %d", statusCode);
-        NSLog(@"publish status message = %@", statusMessage);
+        NSString *string2 = [NSString stringWithFormat:@"http://storify.com/eventify1/%@/publish", storyTitle.text];
+        NSURL *url2 = [NSURL URLWithString:string2];
+        ASIFormDataRequest *request2 = [ASIFormDataRequest requestWithURL:url2];
+        [request2 setPostValue:@"eventify1" forKey:@"authorUsername"];
+        [request2 setPostValue:storyTitle.text forKey:@"title"];
+        [request2 setPostValue:@"eventify1" forKey:@"username"];
+        [request2 setPostValue:@"d6e2ba3299dc8e372f2f9788e1c8cb95" forKey:@"api_key"];
+        [request2 setRequestMethod:@"POST"];
+        [request2 startSynchronous];
+        int statusCode2 = [request2 responseStatusCode];
+        NSString *statusMessage2 = [request2 responseStatusMessage];
+        NSLog(@"publish status code = %d", statusCode2);
+        NSLog(@"publish status message = %@", statusMessage2);
         
         if (statusCode == 200) {
             EventViewController *evc = [[EventViewController alloc] init];
