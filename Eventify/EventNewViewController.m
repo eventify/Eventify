@@ -57,13 +57,27 @@
         NSLog(@"publish status code = %d", statusCode);
         NSLog(@"publish status message = %@", statusMessage);
         
-        
-        EventViewController *evc = [[EventViewController alloc] init];
-        SearchViewController *svc = [[SearchViewController alloc] init];
-        
-        [self.navController pushViewController:evc animated:NO];
-        [self.navController pushViewController:svc animated:NO];
-        [self dismissModalViewControllerAnimated:YES];
+        if (statusCode == 200) {
+            EventViewController *evc = [[EventViewController alloc] init];
+            SearchViewController *svc = [[SearchViewController alloc] init];
+            
+            [self.navController pushViewController:evc animated:NO];
+            [self.navController pushViewController:svc animated:NO];
+            [self dismissModalViewControllerAnimated:YES];
+
+        }
+        else    {
+            //popup alert if we get anything other than a 200 code.
+            UIAlertView *errorAlert = [[UIAlertView alloc]
+                                       initWithTitle: @"Publish Error:"
+                                       message: @"Unable to publish event on storify.com"
+                                       delegate:nil
+                                       cancelButtonTitle:@"OK"
+                                       otherButtonTitles:nil];
+            [errorAlert show];
+            [errorAlert release];
+            
+        }
     } 
     else  
     {
