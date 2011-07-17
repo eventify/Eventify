@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
+#import "TwitterHelper.h"
 
-@interface SearchViewController : UIViewController
+@interface SearchViewController : UITableViewController {
+    Person *person;
+}
+
+@property (nonatomic, retain) Person *person;
 
 @end
+
