@@ -7,7 +7,7 @@
 //
 
 #import "EventViewController.h"
-#import "SearchViewController.h"
+#import "UserTweetsViewController.h"
 
 @implementation EventViewController
 
@@ -35,7 +35,7 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Tweets";
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showSearchViewController)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showUserTweetsViewController)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
     
@@ -162,12 +162,12 @@
      */
 }
 
-- (void)showSearchViewController
+- (void)showUserTweetsViewController
 {
     
-    SearchViewController *searchViewController = [[SearchViewController alloc] init];
-    [self.navigationController pushViewController:searchViewController animated:YES];
-    [searchViewController release];
+    UserTweetsViewController *tweetsViewController = [[UserTweetsViewController alloc] initWithNibName:@"UserTweetsViewController" bundle: nil];
+    [self.navigationController pushViewController:tweetsViewController animated:YES];
+    [tweetsViewController release];
     
 }
 
