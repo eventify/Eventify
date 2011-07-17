@@ -28,7 +28,6 @@
 		07E92A6913D2619F0088CA81 /* EventifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A6813D2619F0088CA81 /* EventifyTests.m */; };
 		07E92A8513D2656E0088CA81 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A8313D2656E0088CA81 /* EventViewController.m */; };
 		07E92A8613D2656E0088CA81 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E92A8413D2656E0088CA81 /* EventViewController.xib */; };
-		07E92A8A13D265AF0088CA81 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E92A8813D265AF0088CA81 /* SearchViewController.m */; };
 		08AEF4EC13D277EF00656864 /* EventNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AEF4EB13D277EF00656864 /* EventNewViewController.xib */; };
 		08AEF4F013D2780000656864 /* EventNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AEF4EE13D2780000656864 /* EventNewViewController.m */; };
 		08AEF4F113D2780000656864 /* EventNewViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 08AEF4EF13D2780000656864 /* EventNewViewController.h */; };
@@ -117,8 +116,6 @@
 		07E92A8213D2656E0088CA81 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		07E92A8313D2656E0088CA81 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		07E92A8413D2656E0088CA81 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
-		07E92A8713D265AF0088CA81 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		07E92A8813D265AF0088CA81 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		08AEF4EB13D277EF00656864 /* EventNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventNewViewController.xib; sourceTree = "<group>"; };
 		08AEF4EE13D2780000656864 /* EventNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNewViewController.m; sourceTree = "<group>"; };
 		08AEF4EF13D2780000656864 /* EventNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventNewViewController.h; sourceTree = "<group>"; };
@@ -334,8 +331,6 @@
 				07E92A4D13D2619F0088CA81 /* RootViewController.m */,
 				07E92A8213D2656E0088CA81 /* EventViewController.h */,
 				07E92A8313D2656E0088CA81 /* EventViewController.m */,
-				07E92A8713D265AF0088CA81 /* SearchViewController.h */,
-				07E92A8813D265AF0088CA81 /* SearchViewController.m */,
 				4A84E21513D3664D00B72F28 /* UserTweetsViewController.h */,
 				4A84E21613D3664E00B72F28 /* UserTweetsViewController.m */,
 			);
@@ -556,7 +551,6 @@
 				07E92A4813D2619F0088CA81 /* Eventify.xcdatamodeld in Sources */,
 				07E92A4E13D2619F0088CA81 /* RootViewController.m in Sources */,
 				07E92A8513D2656E0088CA81 /* EventViewController.m in Sources */,
-				07E92A8A13D265AF0088CA81 /* SearchViewController.m in Sources */,
 				08AEF4F013D2780000656864 /* EventNewViewController.m in Sources */,
 				08AEF4F113D2780000656864 /* EventNewViewController.h in Sources */,
 				08AEF51113D27B8700656864 /* ASIWebPageRequest.h in Sources */,
