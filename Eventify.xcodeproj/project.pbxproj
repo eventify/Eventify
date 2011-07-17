@@ -76,6 +76,8 @@
 		4A1F206013D27E4E007851D0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F205413D27E4E007851D0 /* SBJsonWriter.m */; };
 		C212784713D2A5C60029CC6F /* TwitterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C212784613D2A5C60029CC6F /* TwitterHelper.m */; };
 		C212784B13D2A5DA0029CC6F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C212784A13D2A5DA0029CC6F /* Person.m */; };
+		C212785913D357700029CC6F /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C212785813D357700029CC6F /* UserView.xib */; };
+		C212786C13D35B040029CC6F /* TweetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C212786B13D35B030029CC6F /* TweetView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +180,8 @@
 		C212784613D2A5C60029CC6F /* TwitterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterHelper.m; sourceTree = "<group>"; };
 		C212784913D2A5DA0029CC6F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C212784A13D2A5DA0029CC6F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C212785813D357700029CC6F /* UserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
+		C212786B13D35B030029CC6F /* TweetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +316,8 @@
 				07E92A8913D265AF0088CA81 /* SearchViewController.xib */,
 				07E92A3C13D2619F0088CA81 /* Eventify-Info.plist */,
 				07E92A3D13D2619F0088CA81 /* InfoPlist.strings */,
+				C212785813D357700029CC6F /* UserView.xib */,
+				C212786B13D35B030029CC6F /* TweetView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -503,6 +509,8 @@
 				07E92A8613D2656E0088CA81 /* EventViewController.xib in Resources */,
 				07E92A8B13D265AF0088CA81 /* SearchViewController.xib in Resources */,
 				08AEF4EC13D277EF00656864 /* EventNewViewController.xib in Resources */,
+				C212785913D357700029CC6F /* UserView.xib in Resources */,
+				C212786C13D35B040029CC6F /* TweetView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
