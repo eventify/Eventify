@@ -7,8 +7,8 @@
 //
 
 #import "EventifyAppDelegate.h"
-
 #import "RootViewController.h"
+#import "ASIHTTPRequest.h"
 
 @implementation EventifyAppDelegate
 
@@ -24,7 +24,24 @@
     // Add the navigation controller's view to the window and display.
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    
+    [self loadEventsFromServer];
+    
     return YES;
+}
+
+- (void) loadEventsFromServer 
+{
+    NSURL *url = [NSURL URLWithString:@"http://storify.com/eventify1.json"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request startSynchronous];
+    NSError *error = [request error];
+    NSString *response;
+    if (!error) {
+        response = [request responseString];
+    }
+    NSLog(@"User info with stories: %@", response);
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

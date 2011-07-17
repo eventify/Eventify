@@ -275,8 +275,8 @@
 		07E92A7513D261F40088CA81 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				08AEF4EE13D2780000656864 /* EventNewViewController.m */,
 				08AEF4EF13D2780000656864 /* EventNewViewController.h */,
+				08AEF4EE13D2780000656864 /* EventNewViewController.m */,
 				07E92A4C13D2619F0088CA81 /* RootViewController.h */,
 				07E92A4D13D2619F0088CA81 /* RootViewController.m */,
 				07E92A8213D2656E0088CA81 /* EventViewController.h */,

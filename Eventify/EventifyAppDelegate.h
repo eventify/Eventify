@@ -21,4 +21,6 @@
 
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
+- (void) loadEventsFromServer;
+
 @end
