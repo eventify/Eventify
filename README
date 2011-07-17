@@ -1,8 +1,6 @@
-Dan's line!
+After pulling down the repository, you may also need to do:
 
-test
+git submodule init
+git submodule update
 
 
-wow
-
-Hi There
