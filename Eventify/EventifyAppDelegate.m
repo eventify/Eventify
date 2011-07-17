@@ -9,6 +9,7 @@
 #import "EventifyAppDelegate.h"
 #import "RootViewController.h"
 #import "ASIHTTPRequest.h"
+#import "SBJson.h"
 
 @implementation EventifyAppDelegate
 
@@ -41,6 +42,7 @@
         response = [request responseString];
     }
     NSLog(@"User info with stories: %@", response);
+    NSDictionary *d = [response JSONValue];
 
 }
 
