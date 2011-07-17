@@ -16,5 +16,6 @@
 
 - (IBAction) createStoryButtonPressed:(id) sender;
 - (IBAction) getStoriesButtonPressed:(id) sender;
+- (IBAction) dismissButtonPressed:(id) sender;
 
 @end

@@ -52,6 +52,12 @@
     NSLog(@"User info with stories: %@", response);
 }
 
+- (IBAction) dismissButtonPressed:(id) sender
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
