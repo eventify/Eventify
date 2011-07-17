@@ -60,28 +60,58 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	static NSString *kCellID = @"cellID";
-	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
-	if (cell == nil)
-	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	static NSString *EditCellIdentifier = @"EditCell";
+    
+    
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:EditCellIdentifier];
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:EditCellIdentifier] autorelease];
+		
+        
+		UILabel *label = [[UILabel alloc] initWithFrame:kLabelRect];
+		label.tag = kCellLabelTag;
+		[cell.contentView addSubview:label];
+		[label release];
+		
+		UIImageView *imageView = [[UIImageView alloc] initWithImage:unselectedImage];
+		imageView.frame = CGRectMake(5.0, 10.0, 23.0, 23.0);
+		[cell.contentView addSubview:imageView];
+		imageView.hidden = !inPseudoEditMode;
+		imageView.tag = kCellImageViewTag;
+		[imageView release];
+		
 	}
 	
-	/*
-	 If the requesting table view is the search display controller's table view, configure the cell using the filtered content, otherwise use the main list.
-	 */
+	[UIView beginAnimations:@"cell shift" context:nil];
 	
+	UILabel *label = (UILabel *)[cell.contentView viewWithTag:kCellLabelTag];
+    if (tableView == self.searchDisplayController.searchResultsTableView) 
+    {
+	label.text =  [self.person.tweets objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        label.text = @"";
+    }
+	label.frame = (inPseudoEditMode) ? kLabelIndentedRect : kLabelRect;
+	label.opaque = NO;
 	
-	NSString *tweet = nil;
-	if (tableView == self.searchDisplayController.searchResultsTableView) {
-		//tweet = [self.filteredListContent objectAtIndex:indexPath.row];
-		cell.textLabel.text = [self.person.tweets objectAtIndex:indexPath.row];
-    }
-	else {
-		cell.textLabel.text = @"";
-    }
+	UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:kCellImageViewTag];
+	NSNumber *selected = [selectedArray objectAtIndex:[indexPath row]];
+	imageView.image = ([selected boolValue]) ? selectedImage : unselectedImage;
+	imageView.hidden = !inPseudoEditMode;
+	[UIView commitAnimations];
+	
+//	if (tableView == self.searchDisplayController.searchResultsTableView) 
+//    {
+//		//tweet = [self.filteredListContent objectAtIndex:indexPath.row];
+//		cell.textLabel.text = [self.person.tweets objectAtIndex:indexPath.row];
+//    }
+//	else {
+//		cell.textLabel.text = @"";
+//    }
+//      [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
 	return cell;
 }
 
@@ -254,52 +284,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSMutableArray *rowsToBeAdded = [[NSMutableArray alloc] init];
-	NSMutableArray *indexPaths = [[NSMutableArray alloc] init];
-	int index = 0;
-	for (NSNumber *rowSelected in selectedArray)
-	{
-		if ([rowSelected boolValue])
-		{
-			
-			[rowsToBeAdded addObject:[filteredListContent objectAtIndex:index]];
-			NSUInteger pathSource[2] = {0, index};
-			NSIndexPath *path = [NSIndexPath indexPathWithIndexes:pathSource length:2];
-			[indexPaths addObject:path];
-		}		
-		index++;
-	}
-	
-	for (id value in rowsToBeAdded)
-	{
-		[filteredListContent removeObject:value];
-	}
-	
-	[self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-	
-	[indexPaths release];
-	[rowsToBeAdded release];
-	inPseudoEditMode = NO;
-    NSString *tweetName = [self.searchDisplayController.searchBar text];
-	[self loadTweetsForUser:tweetName];
-	[self.tableView reloadData];
-}
 
--(IBAction)togglePseudoEditMode
-{
-	self.inPseudoEditMode = !inPseudoEditMode;
-	toolbar.hidden = !inPseudoEditMode;
-	
-	[self.tableView reloadData];
-	
-}
-- (void)populateSelectedArray
-{
-	NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:[filteredListContent count]];
-	for (int i=0; i < [filteredListContent count]; i++)
-		[array addObject:[NSNumber numberWithBool:NO]];
-	self.selectedArray = array;
-	[array release];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+	if (inPseudoEditMode)
+	{
+		BOOL selected = [[selectedArray objectAtIndex:[indexPath row]] boolValue];
+		[selectedArray replaceObjectAtIndex:[indexPath row] withObject:[NSNumber numberWithBool:!selected]];
+		[self.tableView reloadData];
+	}
 }
 
 
@@ -308,6 +300,8 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
+    self.inPseudoEditMode = !inPseudoEditMode;
+	toolbar.hidden = !inPseudoEditMode;
     [self filterContentForSearchText:searchString scope:
 	 [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     

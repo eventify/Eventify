@@ -6,6 +6,12 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#define kCellImageViewTag		1000
+#define kCellLabelTag			1001
+
+#define kLabelIndentedRect	CGRectMake(40.0, 12.0, 275.0, 20.0)
+#define kLabelRect			CGRectMake(15.0, 12.0, 275.0, 20.0)
+
 #import <UIKit/UIKit.h>
 #import "Person.h"
 #import "TwitterHelper.h"
