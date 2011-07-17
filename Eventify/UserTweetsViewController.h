@@ -1,5 +1,5 @@
 //
-//  SearchViewController.h
+//  UserTweetsViewController.h
 //  Eventify
 //
 //  Created by carlos on 7/16/11.
@@ -10,7 +10,7 @@
 #import "Person.h"
 #import "TwitterHelper.h"
 
-@interface SearchViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate> {
+@interface UserTweetsViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate> {
     Person *person;
 	NSArray			*listContent;			// The master content.
 	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.

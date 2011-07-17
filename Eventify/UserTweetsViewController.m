@@ -1,16 +1,16 @@
 //
-//  SearchViewController.m
+//  UserTweetsViewController.m
 //  Eventify
 //
 //  Created by carlos on 7/16/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "UserTweetsViewController.h"
 #import "SBJson.h"
 
 
-@implementation SearchViewController
+@implementation UserTweetsViewController
 
 @synthesize person;
 @synthesize listContent, filteredListContent;
@@ -38,7 +38,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSLog(@"number of rows: %d", [self.person.tweets count]);
-
+	
 	/*
 	 If the requesting table view is the search display controller's table view, return the count of
      the filtered list, otherwise return the count of the main list.
@@ -68,7 +68,7 @@
 	/*
 	 If the requesting table view is the search display controller's table view, configure the cell using the filtered content, otherwise use the main list.
 	 */
-
+	
 	
 	NSString *tweet = nil;
 	if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -92,7 +92,7 @@
 {
 	
     [super viewDidLoad];
-
+	
 	self.title = @"Tweets";
 	self.filteredListContent = [NSMutableArray array];
 	[self.tableView reloadData];
@@ -120,7 +120,7 @@
     }
     self.person.tweets = temp;
     NSLog(@"tweets %@", self.person.tweets);
-
+	
 }
 
 
@@ -139,18 +139,18 @@
 	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
 	 */
 	
-//	for (Item *item in listContent)
-//	{
-//		if ([scope isEqualToString:@"All"] || [item.type isEqualToString:scope])
-//		{
-//			NSComparisonResult result = [item.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
-//            if (result == NSOrderedSame)
-//			{
-//				[self.filteredListContent addObject:item];
-//            }
-//		}
-//	}
-
+	//	for (Item *item in listContent)
+	//	{
+	//		if ([scope isEqualToString:@"All"] || [item.type isEqualToString:scope])
+	//		{
+	//			NSComparisonResult result = [item.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+	//            if (result == NSOrderedSame)
+	//			{
+	//				[self.filteredListContent addObject:item];
+	//            }
+	//		}
+	//	}
+	
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -238,7 +238,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
-
+	
 	/** @todo get the item ID so we can tell storify to add it to the story */
 	// (some object) = [self.listContent objectAtIndex:indexPath.row];
 }

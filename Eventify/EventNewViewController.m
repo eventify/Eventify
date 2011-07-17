@@ -8,7 +8,7 @@
 
 #import "EventNewViewController.h"
 #import "EventViewController.h"
-#import "SearchViewController.h"
+#import "UserTweetsViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 
@@ -59,10 +59,10 @@
         
         if (statusCode == 200) {
             EventViewController *evc = [[EventViewController alloc] init];
-            SearchViewController *svc = [[SearchViewController alloc] init];
+            UserTweetsViewController *uvc = [[UserTweetsViewController alloc] init];
             
             [self.navController pushViewController:evc animated:NO];
-            [self.navController pushViewController:svc animated:NO];
+            [self.navController pushViewController:uvc animated:NO];
             [self dismissModalViewControllerAnimated:YES];
 
         }
