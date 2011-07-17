@@ -109,7 +109,7 @@
 	self.selectedImage = [UIImage imageNamed:@"selected.png"];
 	self.unselectedImage = [UIImage imageNamed:@"unselected.png"];
 	
-    NSString *tweetName = [self.searchDisplayController.searchBar text];
+//    NSString *tweetName = [self.searchDisplayController.searchBar text];
 //	[self loadTweetsForUser:tweetName];
 	
 //	deleteButton.target = self;
@@ -127,18 +127,17 @@
 		[self.person setStatusMessages:localMessages];
 	}
 	else {
-		[self.person setStatusMessages:[NSArray arrayWithObjects:@"no tweets found", nil]];
+		[self.person setStatusMessages:[NSArray arrayWithObject:[NSDictionary dictionaryWithObject:@"no tweets found" forKey:@"text"]]];
 	}
 	[localMessages release];
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *message in [self.person statusMessages]) 
-    {
+    for (NSDictionary *message in [self.person statusMessages]) {
 //        NSLog(@"%@", [message objectForKey:@"text"]);
-        [temp addObject:[message objectForKey:@"text"]];
+		[temp addObject:[message objectForKey:@"text"]];
+		self.person.tweets = temp;
     }
-    self.person.tweets = temp;
     NSLog(@"tweets %@", self.person.tweets);    
     
     NSDictionary *userInfo = [TwitterHelper fetchInfoForUsername:userName];
@@ -312,6 +311,8 @@
     [self filterContentForSearchText:searchString scope:
 	 [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     
+	[self loadTweetsForUser:searchString];
+
     // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
