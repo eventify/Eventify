@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CA255613D36C1B00B3910D /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CA255413D36C1B00B3910D /* selected.png */; };
+		01CA255713D36C1B00B3910D /* unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CA255513D36C1B00B3910D /* unselected.png */; };
 		07E92A3313D2619F0088CA81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3213D2619F0088CA81 /* UIKit.framework */; };
 		07E92A3513D2619F0088CA81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3413D2619F0088CA81 /* Foundation.framework */; };
 		07E92A3713D2619F0088CA81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92A3613D2619F0088CA81 /* CoreGraphics.framework */; };
@@ -91,6 +93,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01CA255413D36C1B00B3910D /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = SOURCE_ROOT; };
+		01CA255513D36C1B00B3910D /* unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unselected.png; sourceTree = SOURCE_ROOT; };
 		07E92A2E13D2619F0088CA81 /* Eventify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E92A3213D2619F0088CA81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07E92A3413D2619F0088CA81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -309,6 +313,8 @@
 		07E92A7413D261D20088CA81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01CA255413D36C1B00B3910D /* selected.png */,
+				01CA255513D36C1B00B3910D /* unselected.png */,
 				08AEF4EB13D277EF00656864 /* EventNewViewController.xib */,
 				07E92A4913D2619F0088CA81 /* MainWindow.xib */,
 				07E92A4F13D2619F0088CA81 /* RootViewController.xib */,
@@ -511,6 +517,8 @@
 				C212785913D357700029CC6F /* UserView.xib in Resources */,
 				C212786C13D35B040029CC6F /* TweetView.xib in Resources */,
 				4A84E21913D3664F00B72F28 /* UserTweetsViewController.xib in Resources */,
+				01CA255613D36C1B00B3910D /* selected.png in Resources */,
+				01CA255713D36C1B00B3910D /* unselected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

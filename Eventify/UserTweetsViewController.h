@@ -14,11 +14,21 @@
     Person *person;
 	NSArray			*listContent;			// The master content.
 	NSMutableArray	*filteredListContent;	// The content filtered as a result of a search.
+    UIImage *selectedImage;
+	UIImage *unselectedImage;
+    BOOL inPseudoEditMode;
+    NSMutableArray *selectedArray;
+    UIToolbar *toolbar;
 }
 
 @property (nonatomic, retain) Person *person;
 @property (nonatomic, retain) NSArray *listContent;
 @property (nonatomic, retain) NSMutableArray *filteredListContent;
+@property (nonatomic, retain) UIImage *selectedImage;
+@property (nonatomic, retain) UIImage *unselectedImage;
+@property (nonatomic, retain) NSMutableArray *selectedArray;
+@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
+@property (nonatomic, assign) BOOL inPseudoEditMode;
 
 - (void)loadTweetsForUser:(NSString *)userName;
 
