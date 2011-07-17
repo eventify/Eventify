@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 #import "EventNewViewController.h"
+#import "SBJson.h"
+
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -24,6 +26,8 @@
     // Set up the edit and add buttons.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
+	NSLog(@"Parsed some JSON: %@", [@"[1,2,3,true,false,null]" JSONValue]);
+	
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showEventNewViewController)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
