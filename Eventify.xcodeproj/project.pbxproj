@@ -143,7 +143,6 @@
 				07E92A4213D2619F0088CA81 /* Eventify-Prefix.pch */,
 				07E92A7413D261D20088CA81 /* Resources */,
 				07E92A7213D261A80088CA81 /* Source */,
-				07E92A7613D262380088CA81 /* External */,
 			);
 			path = Eventify;
 			sourceTree = "<group>";
@@ -213,13 +212,6 @@
 				07E92A8813D265AF0088CA81 /* SearchViewController.m */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		07E92A7613D262380088CA81 /* External */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = External;
 			sourceTree = "<group>";
 		};
 		07E92A7713D262540088CA81 /* Model */ = {
