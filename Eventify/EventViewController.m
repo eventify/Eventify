@@ -104,7 +104,9 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
+    UIView *tweetView = [[[NSBundle mainBundle] loadNibNamed:@"TweetView" owner:self options:nil] lastObject];
+    
+    [cell addSubview:tweetView];
     
     return cell;
 }

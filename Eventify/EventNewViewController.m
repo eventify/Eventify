@@ -14,7 +14,7 @@
 
 @implementation EventNewViewController
 
-@synthesize storyTitle, navController;
+@synthesize storyTitle, navController, delegate;
 
 - (void)dealloc
 {
@@ -58,6 +58,9 @@
         NSLog(@"publish status message = %@", statusMessage2);
         
         if (statusCode == 200) {
+            //store in core data, then push view controlers
+            [self.delegate insertNewObjectWithTitle:storyTitle.text];
+
             EventViewController *evc = [[EventViewController alloc] init];
             UserTweetsViewController *uvc = [[UserTweetsViewController alloc] initWithNibName:@"UserTweetsViewController" bundle:nil];
             

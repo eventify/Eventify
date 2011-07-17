@@ -61,6 +61,7 @@
 {
     EventNewViewController *vc = [[EventNewViewController alloc] init ];
     vc.navController = self.navigationController;
+    vc.delegate = self;
     [self presentModalViewController:vc animated:YES];
     
 }
@@ -243,6 +244,7 @@
         }
         
     }
+    [self.tableView reloadData];
 }
 
 #pragma mark - Fetched results controller
