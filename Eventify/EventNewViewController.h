@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RootViewController.h"
 @interface EventNewViewController : UIViewController {
     
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *storyTitle;
 @property (nonatomic, retain) UINavigationController *navController;
+@property (nonatomic, assign) RootViewController *delegate;
 
 - (IBAction) createStoryButtonPressed:(id) sender;
 - (IBAction) getStoriesButtonPressed:(id) sender;
