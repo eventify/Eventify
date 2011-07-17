@@ -78,30 +78,35 @@
 		[cell.contentView addSubview:imageView];
 		imageView.hidden = !inPseudoEditMode;
 		imageView.tag = kCellImageViewTag;
-		[imageView release];
-		
+        [imageView release];
+    }
+        UILabel *label = (UILabel *)[cell.contentView viewWithTag:kCellLabelTag];
+        [UIView beginAnimations:@"cell shift" context:nil];
+        label.text =  [self.person.tweets objectAtIndex:indexPath.row];
+        label.frame = (inPseudoEditMode) ? kLabelIndentedRect : kLabelRect;
+        label.opaque = NO;
+        
+        UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:kCellImageViewTag];
+        NSNumber *selected = [selectedArray objectAtIndex:[indexPath row]];
+        imageView.image = ([selected boolValue]) ? selectedImage : unselectedImage;
+        imageView.hidden = !inPseudoEditMode;
+        [UIView commitAnimations];
+
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+	if (inPseudoEditMode)
+	{
+		BOOL selected = [[selectedArray objectAtIndex:[indexPath row]] boolValue];
+		[selectedArray replaceObjectAtIndex:[indexPath row] withObject:[NSNumber numberWithBool:!selected]];
+		[self.tableView reloadData];
 	}
-	
-	[UIView beginAnimations:@"cell shift" context:nil];
-	
-	UILabel *label = (UILabel *)[cell.contentView viewWithTag:kCellLabelTag];
-    if (tableView == self.searchDisplayController.searchResultsTableView) 
-    {
-	label.text =  [self.person.tweets objectAtIndex:indexPath.row];
-    }
-    else
-    {
-        label.text = @"";
-    }
-	label.frame = (inPseudoEditMode) ? kLabelIndentedRect : kLabelRect;
-	label.opaque = NO;
-	
-	UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:kCellImageViewTag];
-	NSNumber *selected = [selectedArray objectAtIndex:[indexPath row]];
-	imageView.image = ([selected boolValue]) ? selectedImage : unselectedImage;
-	imageView.hidden = !inPseudoEditMode;
-	[UIView commitAnimations];
-	
+}
+
 //	if (tableView == self.searchDisplayController.searchResultsTableView) 
 //    {
 //		//tweet = [self.filteredListContent objectAtIndex:indexPath.row];
@@ -111,9 +116,6 @@
 //		cell.textLabel.text = @"";
 //    }
 //      [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    
-	return cell;
-}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -151,6 +153,8 @@
     NSLog(@"search button clicked");
     NSString *searchString = [self.searchDisplayController.searchBar text];
     [self loadTweetsForUser:searchString];
+    self.inPseudoEditMode = !inPseudoEditMode;
+	toolbar.hidden = !inPseudoEditMode;
 }
 
 - (void)loadTweetsForUser:(NSString *)userName {
@@ -248,58 +252,7 @@
     return height+40; 
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete)
- {
- // Delete the row from the data source.
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert)
- {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
- }   
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-	if (inPseudoEditMode)
-	{
-		BOOL selected = [[selectedArray objectAtIndex:[indexPath row]] boolValue];
-		[selectedArray replaceObjectAtIndex:[indexPath row] withObject:[NSNumber numberWithBool:!selected]];
-		[self.tableView reloadData];
-	}
-}
 
 
 #pragma mark -
@@ -307,8 +260,6 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    self.inPseudoEditMode = !inPseudoEditMode;
-	toolbar.hidden = !inPseudoEditMode;
     [self filterContentForSearchText:searchString scope:
 	 [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     
