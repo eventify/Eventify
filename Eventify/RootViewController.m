@@ -10,6 +10,7 @@
 #import "EventNewViewController.h"
 #import "SBJson.h"
 #import "ASIHTTPRequest.h"
+#import "EventViewController.h"
 
 
 @interface RootViewController ()
@@ -28,7 +29,7 @@
     
     // Set up the edit and add buttons.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
+    self.navigationItem.title = @"Eventify";
 	NSLog(@"Parsed some JSON: %@", [@"[1,2,3,true,false,null]" JSONValue]);
 	
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showEventNewViewController)];
@@ -110,6 +111,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     }
 
     // Configure the cell.
@@ -157,13 +160,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+    EventViewController *detailViewController = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
     // ...
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
-	*/
+	
 }
 
 - (void)didReceiveMemoryWarning
