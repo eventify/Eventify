@@ -127,7 +127,7 @@
     self.person.tweets = temp;
     NSLog(@"tweets %@", self.person.tweets);    
     
-    NSDictionary *userInfo = [TwitterHelper fetchInfoForUsername:@"iosdevcamp"];
+    NSDictionary *userInfo = [TwitterHelper fetchInfoForUsername:userName];
     NSLog(@"userInfo: %@", userInfo);
     
     self.person.description = [userInfo objectForKey:@"description"];
