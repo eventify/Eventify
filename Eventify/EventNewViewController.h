@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StorifySampleCodeViewController : UIViewController {
+@interface EventNewViewController : UIViewController {
     
 }
 

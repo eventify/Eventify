@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "EventNewViewController.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -23,11 +24,17 @@
     // Set up the edit and add buttons.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showEventNewViewController)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
 }
 
+- (void) showEventNewViewController
+{
+    EventNewViewController *vc = [[EventNewViewController alloc] init ];
+    [self presentModalViewController:vc animated:YES];
+    
+}
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

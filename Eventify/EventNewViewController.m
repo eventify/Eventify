@@ -6,11 +6,11 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "StorifySampleCodeViewController.h"
+#import "EventNewViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 
-@implementation StorifySampleCodeViewController
+@implementation EventNewViewController
 
 @synthesize storyTitle;
 
