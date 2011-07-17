@@ -15,6 +15,7 @@
 @synthesize userName;
 @synthesize displayName;
 @synthesize image;
+@synthesize description;
 @synthesize url;
 @synthesize statusMessages;
 @synthesize twitterStatus;

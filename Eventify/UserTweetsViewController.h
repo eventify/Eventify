@@ -20,5 +20,7 @@
 @property (nonatomic, retain) NSArray *listContent;
 @property (nonatomic, retain) NSMutableArray *filteredListContent;
 
+- (void)loadTweetsForUser:(NSString *)userName;
+
 @end
 

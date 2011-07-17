@@ -28,6 +28,8 @@
 {
 	[listContent release];
 	[filteredListContent release];
+    [person release];
+    
 	[super dealloc];
 }
 
@@ -98,31 +100,39 @@
 	[self.tableView reloadData];
 	self.tableView.scrollEnabled = YES;
     
-    person = [[Person alloc] init];
-    [person setUserName:@"iosdevcamp"];
+    self.person = [[Person alloc] init];
+}
+
+- (void)loadTweetsForUser:(NSString *)userName {
     
-    NSLog(@"get events for %@", [person userName]);
+    [self.person setUserName:userName];
     
-	NSArray *localMessages = [[NSArray alloc] initWithArray:[TwitterHelper fetchTimelineForUsername:[person userName]]];
+    NSLog(@"get events for %@", [self.person userName]);
+    
+	NSArray *localMessages = [[NSArray alloc] initWithArray:[TwitterHelper fetchTimelineForUsername:[self.person userName]]];
 	if (localMessages && [localMessages count]) {
-		[person setStatusMessages:localMessages];
+		[self.person setStatusMessages:localMessages];
 	}
 	else {
-		[person setStatusMessages:[NSArray arrayWithObjects:@"no tweets found", nil]];
+		[self.person setStatusMessages:[NSArray arrayWithObjects:@"no tweets found", nil]];
 	}
 	[localMessages release];
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *message in [person statusMessages]) {
+    for (NSDictionary *message in [self.person statusMessages]) {
         NSLog(@"%@", [message objectForKey:@"text"]);
         [temp addObject:[message objectForKey:@"text"]];
     }
     self.person.tweets = temp;
-    NSLog(@"tweets %@", self.person.tweets);
-	
+    NSLog(@"tweets %@", self.person.tweets);    
+    
+    NSDictionary *userInfo = [TwitterHelper fetchInfoForUsername:@"iosdevcamp"];
+    NSLog(@"userInfo: %@", userInfo);
+    
+    self.person.description = [userInfo objectForKey:@"description"];
+    self.person.image = [userInfo objectForKey:@"profile_image_url"];    
 }
-
 
 #pragma mark -
 #pragma mark Content Filtering

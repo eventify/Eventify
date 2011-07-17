@@ -14,6 +14,7 @@
 	NSString *userName;
 	NSString *displayName;
 	NSString *image;
+    NSString *description;
 	NSURL *url;
 	NSArray *statusMessages;
 	NSArray *twitterStatus;
@@ -24,6 +25,7 @@
 @property (nonatomic, retain) NSString *userName;
 @property (nonatomic, retain) NSString *displayName;
 @property (nonatomic, retain) NSString *image;
+@property (nonatomic, retain) NSString *description;
 @property (nonatomic, retain) NSURL *url;
 @property (nonatomic, retain) NSArray *statusMessages;
 @property (nonatomic, retain) NSArray *twitterStatus;
